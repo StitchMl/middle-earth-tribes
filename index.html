@@ -1,1 +1,46 @@
-<h1>Hello!</h1>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reindirizzamento in base alla risposta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Inserisci la tua risposta:</h2>
+    <input type="text" id="userInput" placeholder="Scrivi qui...">
+    <button onclick="redirectUser()">Invia</button>
+
+    <script>
+        function redirectUser() {
+            var risposta = document.getElementById("userInput").value.toLowerCase();
+
+            if (risposta.includes("gatto")) {
+                window.location.href = "pagina-gatti.html";
+            } else if (risposta.includes("cane")) {
+                window.location.href = "pagina-cani.html";  
+            } else {
+                alert("Risposta non riconosciuta, riprova!");
+            }
+        }
+    </script>
+
+</body>
+</html>
+
