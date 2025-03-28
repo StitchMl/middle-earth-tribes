@@ -3,29 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reindirizzamento in base alla risposta</title>
+    <title>Scopri la tua tribù</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'IM Fell English SC', serif;
             text-align: center;
-            margin-top: 50px;
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            padding: 50px;
         }
+
+        h2 {
+            font-size: 32px;
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
         input {
-            padding: 10px;
-            width: 300px;
-            margin: 10px;
+            padding: 15px;
+            width: 320px;
+            font-size: 18px;
+            border: 2px solid #ffdd57;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
         }
+
         button {
-            padding: 10px 20px;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffdd57;
+            color: #333;
+            font-weight: bold;
             cursor: pointer;
+            transition: 0.3s;
         }
+
+        button:hover {
+            background-color: #e6c300;
+            transform: scale(1.1);
+        }
+
     </style>
 </head>
 <body>
 
-    <h2>Scrivi la tua tribù di origine...</h2>
-    <input type="text" id="userInput" placeholder="Scrivi qui...">
-    <button onclick="redirectUser()">Invia</button>
+    <h2>🔮 Scopri la tua tribù nella Terra di Mezzo! 🔮</h2>
+    <br>
+    <input type="text" id="userInput" placeholder="Scrivi qui la tua tribù...">
+    <br>
+    <button onclick="redirectUser()">✨ Scopri ✨</button>
 
     <script>
         function redirectUser() {
@@ -47,4 +84,3 @@
 
 </body>
 </html>
-
