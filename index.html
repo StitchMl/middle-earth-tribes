@@ -23,7 +23,7 @@
 </head>
 <body>
 
-    <h2>Inserisci la tua risposta:</h2>
+    <h2>Scrivi la tua tribù di origine...</h2>
     <input type="text" id="userInput" placeholder="Scrivi qui...">
     <button onclick="redirectUser()">Invia</button>
 
@@ -31,12 +31,16 @@
         function redirectUser() {
             var risposta = document.getElementById("userInput").value.toLowerCase();
 
-            if (risposta.includes("gatto")) {
-                window.location.href = "pagina-gatti.html";
-            } else if (risposta.includes("cane")) {
-                window.location.href = "pagina-cani.html";  
+            if (risposta.includes("alberi") || risposta.includes("foresta") || risposta.includes("saggio")) {
+                window.location.href = "ent.html";
+            } else if (risposta.includes("magia") || risposta.includes("arco") || risposta.includes("bosco")) {
+                window.location.href = "elfi.html";  
+            } else if (risposta.includes("miniera") || risposta.includes("barba") || risposta.includes("ascia")) {
+                window.location.href = "nani.html";
+            } else if (risposta.includes("cibo") || risposta.includes("avventura") || risposta.includes("casa")) {
+                window.location.href = "hobbit.html";
             } else {
-                alert("Risposta non riconosciuta, riprova!");
+                alert("Non riconosco il popolo! Prova con un'altra parola.");
             }
         }
     </script>
