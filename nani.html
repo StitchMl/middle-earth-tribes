@@ -36,25 +36,24 @@
             to { text-shadow: 0 0 30px #ff6600; }
         }
 
-        p {
-            font-size: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            border-radius: 10px;
-            display: inline-block;
-            animation: fadeInUp 2s ease-in-out;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .image-container {
+            flex: 1;
+            max-width: 400px;
         }
 
         img {
-            width: 80%;
-            max-width: 500px;
+            width: 100%;
             border-radius: 10px;
-            margin: 20px 0;
             box-shadow: 0 0 15px #ff9900;
             animation: fadeIn 2s ease-in-out, shake 2s infinite alternate ease-in-out;
         }
@@ -62,6 +61,23 @@
         @keyframes shake {
             from { transform: translateX(-2px); }
             to { transform: translateX(2px); }
+        }
+
+        .letter {
+            flex: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            box-shadow: 0 0 10px rgba(255, 221, 87, 0.5);
+        }
+
+        .letter h2 {
+            text-align: center;
+            font-size: 26px;
+            text-shadow: 0 0 10px #ffcc00;
         }
 
         .back-home {
@@ -88,8 +104,33 @@
 <body>
 
     <h1>⛏️ Sei un Nano! ⛏️</h1>
-    <p>Forte, testardo e legato alle miniere e ai metalli preziosi. Le montagne sono la tua casa.</p>
-    <img src="https://i.pinimg.com/236x/07/c9/6b/07c96bbbd6c7b3258be5827ac4ed7558.jpg" alt="Nano della Terra di Mezzo" style="width: 400px; object-fit: cover;">
+
+    <div class="container">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/236x/07/c9/6b/07c96bbbd6c7b3258be5827ac4ed7558.jpg" alt="Nano della Terra di Mezzo" style="width: 400px; object-fit: cover;">
+        </div>
+        <div class="letter">
+            <h2>📜 Invito ufficiale al Campo Scout! 📜</h2>
+            <p>
+                Saluti, valoroso Nano delle Montagne Nebbiose!  
+                Sei stato convocato per un'epica avventura nel nostro **Campo della Terra di Mezzo**.  
+                Qui, forgerai alleanze, costruirai rifugi e dimostrerai il coraggio della tua stirpe!
+            </p>
+            <h3>⚒️ Come vestirti per l’impresa?</h3>
+            <ul>
+                <li><strong>Tunica o maglia scura</strong> – robusta come una cotta di maglia</li>
+                <li><strong>Cintura larga</strong> – per portare i tuoi attrezzi</li>
+                <li><strong>Pantaloni robusti</strong> – pronti per le miniere</li>
+                <li><strong>Stivali o scarponi</strong> – per affrontare i terreni rocciosi</li>
+                <li><strong>Accessori</strong>: una finta **ascia** o un **mantello pesante**</li>
+                <li><strong>Dettaglio extra</strong>: disegna una barba finta o usane una vera!</li>
+            </ul>
+            <p>
+                L'eco dei tamburi riecheggia nei sotterranei… **sei pronto a unirti ai tuoi fratelli Nani?**  
+                Ti aspettiamo al campo! 🏕️⛏️  
+            </p>
+        </div>
+    </div>
 
 </body>
 </html>
