@@ -5,28 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sei un Nano!</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'IM Fell English SC', serif;
             text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://cdnb.artstation.com/p/assets/images/images/033/841/173/large/matt-hiblen-moria-render.jpg?1610808610') 
+                        no-repeat center center fixed;
             background-color: #8b4513;
-            color: #fff;
+            background-size: cover;
+            color: #ffdd57;
             padding: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 42px;
+            text-shadow: 0 0 15px #ff9900, 0 0 30px #ff6600;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 15px #ff9900; }
+            to { text-shadow: 0 0 30px #ff6600; }
+        }
+
+        p {
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         img {
             width: 80%;
             max-width: 500px;
             border-radius: 10px;
             margin: 20px 0;
+            box-shadow: 0 0 15px #ff9900;
+            animation: fadeIn 2s ease-in-out, shake 2s infinite alternate ease-in-out;
         }
-        a {
-            color: #ffdd57;
+
+        @keyframes shake {
+            from { transform: translateX(-2px); }
+            to { transform: translateX(2px); }
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
             font-size: 18px;
+            color: #fff;
+            background: #5a3d31;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(90, 61, 49, 0.5);
         }
+
+        .back-home:hover {
+            background: #402b21;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(90, 61, 49, 0.8);
+        }
+
     </style>
 </head>
 <body>
+
     <h1>⛏️ Sei un Nano! ⛏️</h1>
     <p>Forte, testardo e legato alle miniere e ai metalli preziosi. Le montagne sono la tua casa.</p>
     <img src="https://i.pinimg.com/236x/07/c9/6b/07c96bbbd6c7b3258be5827ac4ed7558.jpg" alt="Nano della Terra di Mezzo" style="width: 400px; object-fit: cover;">
+
 </body>
 </html>
