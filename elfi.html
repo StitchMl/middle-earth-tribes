@@ -27,41 +27,57 @@
 
         h1 {
             font-size: 42px;
-            text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ff99;
+            text-shadow: 0 0 15px #ff9900, 0 0 30px #ff6600;
             animation: glow 2s infinite alternate;
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 15px #00ffcc; }
-            to { text-shadow: 0 0 30px #00ff99; }
+            from { text-shadow: 0 0 15px #ff9900; }
+            to { text-shadow: 0 0 30px #ff6600; }
         }
 
-        p {
-            font-size: 20px;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            border-radius: 10px;
-            display: inline-block;
-            animation: fadeInUp 2s ease-in-out;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .image-container {
+            flex: 1;
+            max-width: 400px;
         }
 
         img {
-            width: 80%;
-            max-width: 500px;
+            width: 100%;
             border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 0 15px #00ffcc;
-            animation: fadeIn 2s ease-in-out, floating 4s infinite alternate;
+            box-shadow: 0 0 15px #ff9900;
+            animation: fadeIn 2s ease-in-out, shake 2s infinite alternate ease-in-out;
         }
 
-        @keyframes floating {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
+        @keyframes shake {
+            from { transform: translateX(-2px); }
+            to { transform: translateX(2px); }
+        }
+
+        .letter {
+            flex: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            box-shadow: 0 0 10px rgba(255, 221, 87, 0.5);
+        }
+
+        .letter h2 {
+            text-align: center;
+            font-size: 26px;
+            text-shadow: 0 0 10px #ffcc00;
         }
 
         .back-home {
@@ -70,17 +86,17 @@
             padding: 12px 25px;
             font-size: 18px;
             color: #fff;
-            background: #00ff99;
+            background: #5a3d31;
             border-radius: 5px;
             text-decoration: none;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 5px 15px rgba(0, 255, 153, 0.5);
+            box-shadow: 0 5px 15px rgba(90, 61, 49, 0.5);
         }
 
         .back-home:hover {
-            background: #00cc88;
+            background: #402b21;
             transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 255, 153, 0.8);
+            box-shadow: 0 8px 20px rgba(90, 61, 49, 0.8);
         }
 
     </style>
@@ -88,8 +104,31 @@
 <body>
 
     <h1>🧝 Sei un Elfo! 🧝</h1>
-    <p>Agile, nobile e legato alla magia. Vivi tra le foreste incantate e le antiche canzoni.</p>
-    <img src="https://i.pinimg.com/736x/25/43/19/254319bd11d5b2c49407ca2e213799ba.jpg" alt="Elfo della Terra di Mezzo" style="width: 400px; object-fit: cover;">
-
+    <div class="container">
+    <div class="image-container">
+        <img src="https://i.pinimg.com/736x/25/43/19/254319bd11d5b2c49407ca2e213799ba.jpg" alt="Elfo della Terra di Mezzo" style="width: 400px; object-fit: cover;">
+    </div>
+    <div class="letter">
+        <h2>📜 Invito ufficiale al Campo Elfico! 📜</h2>
+        <p>
+            Saluti, nobile Elfo delle Terre Immortali!  
+            Sei stato convocato per un’incantevole avventura nel nostro **Campo della Terra di Mezzo**.  
+            Qui, affinerai le tue abilità magiche, perfezionerai il tiro con l'arco e celebrerai la bellezza della natura!
+        </p>
+        <h3>🏹 Come vestirti per l’impresa?</h3>
+        <ul>
+            <li><strong>Cappa o tunica elegante</strong> – leggera e raffinata, come l’essenza della foresta</li>
+            <li><strong>Arco e frecce</strong> – per lanciare frecce al cuore della bellezza della natura</li>
+            <li><strong>Stivali leggeri</strong> – per camminare silenziosi tra le fronde degli alberi</li>
+            <li><strong>Accessori</strong>: una finta **spada lunga** o un **mantello incantato**</li>
+            <li><strong>Dettaglio extra</strong>: aggiungi qualche ramo o foglia ai tuoi capelli per un tocco di magia!</li>
+        </ul>
+        <p>
+            La melodia delle stelle risuona nella notte… **sei pronto a camminare al fianco dei tuoi fratelli Elfi?**  
+            Ti aspettiamo al campo! 🌲✨
+        </p>
+    </div>
+</div>
+    
 </body>
 </html>
