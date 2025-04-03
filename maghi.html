@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sei un Hobbit!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+
+        body {
+            font-family: 'IM Fell English SC', serif;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://wallpapers.com/images/hd/the-shire-landscape-8oay8s6fq9h7o94p.jpg') 
+                        no-repeat center center fixed;
+            background-color: #7cba5c;
+            background-size: cover;
+            color: #fff;
+            padding: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 42px;
+            text-shadow: 0 0 15px #ff9900, 0 0 30px #ff6600;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 15px #ff9900; }
+            to { text-shadow: 0 0 30px #ff6600; }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .image-container {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ff9900;
+            animation: fadeIn 2s ease-in-out, shake 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes shake {
+            from { transform: translateX(-2px); }
+            to { transform: translateX(2px); }
+        }
+
+        .letter {
+            flex: 2;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            box-shadow: 0 0 10px rgba(255, 221, 87, 0.5);
+        }
+
+        .letter h2 {
+            text-align: center;
+            font-size: 26px;
+            text-shadow: 0 0 10px #ffcc00;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            color: #fff;
+            background: #5a3d31;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(90, 61, 49, 0.5);
+        }
+
+        .back-home:hover {
+            background: #402b21;
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(90, 61, 49, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>🔮 Sei un Mago! 🔮</h1>
+<div class="container">
+    <div class="image-container">
+        <img src="https://jedigirlblog.wordpress.com/wp-content/uploads/2018/01/1180.jpg" alt="Mago della Terra di Mezzo" style="width: 400px; object-fit: cover;">
+    </div>
+    <div class="letter">
+        <h2>📜 Invito ufficiale al Raduno dei Maghi! 📜</h2>
+        <p>
+            Saluti, potente Mago delle Terre di Mezzo!  
+            Sei stato scelto per partecipare a un **grande consiglio arcano** nel nostro **Campo della Terra di Mezzo**.  
+            Qui, studierai antichi incantesimi, custodirai saggezza e guiderai le forze del bene!
+        </p>
+        <h3>🔮 Come vestirti per l’impresa?</h3>
+        <ul>
+            <li><strong>Mantello lungo</strong> – fluttuante come la tua aura magica</li>
+            <li><strong>Tunica ampia</strong> – per muoverti con eleganza e mistero</li>
+            <li><strong>Bastone da Mago</strong> – simbolo del tuo potere ancestrale</li>
+            <li><strong>Accessori</strong>: un finto **grande cappello a punta** o un **libro di incantesimi**</li>
+        </ul>
+        <p>
+            I venti del destino sussurrano segreti antichi… **sei pronto a unirti ai Maestri della Magia?**  
+            Ti aspettiamo al campo! 🏕️✨  
+        </p>
+    </div>
+</div>
+</body>
+</html>
