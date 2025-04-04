@@ -11,8 +11,11 @@
         body {
             font-family: 'IM Fell English SC', serif;
             text-align: center;
-            background: linear-gradient(to bottom right, #0b1d2c, #1a2a1f);
-            color: #fefae0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://ilsignoredeglianelli.it/wp-content/uploads/2023/12/TerreDiMezzo.png') 
+                        no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
             padding: 50px;
             animation: fadeIn 2s ease-in-out;
         }
@@ -24,13 +27,16 @@
 
         /* 🔮 TITOLO */
         h2 {
-            font-size: 34px;
+            font-size: clamp(22px, 5vw, 36px);
             background: rgba(10, 20, 30, 0.6);
             display: inline-block;
             padding: 20px 30px;
             border-radius: 12px;
             border: 2px solid #ffd700;
             animation: glow 2s infinite alternate;
+            max-width: 90%;
+            width: fit-content;
+            margin: 0 auto;
         }
         
         @keyframes glow {
@@ -82,11 +88,12 @@
         /* 🎬 Typing animation */
         .typing {
             display: inline-block;
-            white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid #ffdd57;
-            width: 0;
             animation: typing 3s steps(40, end) forwards, blink 0.8s infinite;
+            max-width: 100%;
+            white-space: normal; /* Cambiato da nowrap */
+            word-break: break-word;
         }
         
         @keyframes typing {
