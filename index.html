@@ -177,30 +177,6 @@
                 alert("Scrivi il tuo Nome e Cognome!");
             }
         }
-
-        var inputField = document.getElementById("userInput");
-        var palantir = document.getElementById("palantir");
-        
-        inputField.addEventListener("focus", () => {
-            palantir.classList.add("active");
-        });
-        
-        inputField.addEventListener("blur", () => {
-            palantir.classList.remove("active");
-        });
-        
-        inputField.addEventListener("input", () => {
-            palantir.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
-        });
-
-        // Imposta la posizione dinamica del palantír con le coordinate calcolate
-        const posX = 65.17;  // Posizione X calcolata (in percentuale)
-        const posY = 33.5;    // Posizione Y calcolata (in percentuale)
-    
-        // Imposta la posizione del palantír
-        const palantir = document.getElementById("palantir");
-        palantir.style.top = posY + '%';
-        palantir.style.left = posX + '%';
     </script>
 
 </body>
