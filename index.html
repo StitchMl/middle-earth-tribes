@@ -11,9 +11,8 @@
         body {
             font-family: 'IM Fell English SC', serif;
             text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                        url('https://ilsignoredeglianelli.it/wp-content/uploads/2023/12/TerreDiMezzo.png') 
-                        no-repeat center center fixed;
+            background: url('images/sfondo_sfera.jpg') no-repeat center center fixed;
+            background-size: cover;
             background-size: cover;
             color: #fff;
             padding: 50px;
@@ -139,7 +138,10 @@
     </style>
 </head>
 <body>
-    <div id="palantir"></div>
+    <div style="position: relative; display: inline-block;">
+        <img src="images/sfondo_sfera.jpg" style="max-width: 100%; height: auto;" alt="Sfondo con sfera">
+        <div id="palantir" style="position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%);"></div>
+    </div>
     <h2 class="typing">🔮 Scrivi nel palantir il tuo nome e cognome per sapere a quale razza appartieni... 🔮</h2>
     <br>
     <input type="text" id="userInput" placeholder="Scrivi il tuo nome...">
