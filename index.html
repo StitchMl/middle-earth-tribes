@@ -140,7 +140,7 @@
 <body>
     <div style="position: relative; display: inline-block;">
         <img src="images/sfondo_sfera.jpg" style="max-width: 100%; height: auto;" alt="Sfondo con sfera">
-        <div id="palantir" style="position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%);"></div>
+        <div id="palantir" style="position: absolute; top: 33.5%; left: 65.17%; transform: translate(-50%, -50%);"></div>
     </div>
     <h2 class="typing">🔮 Scrivi nel palantir il tuo nome e cognome per sapere a quale razza appartieni... 🔮</h2>
     <br>
@@ -186,6 +186,15 @@
         inputField.addEventListener("input", () => {
             palantir.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
         });
+
+        // Imposta la posizione dinamica del palantír con le coordinate calcolate
+        const posX = 65.17;  // Posizione X calcolata (in percentuale)
+        const posY = 33.5;    // Posizione Y calcolata (in percentuale)
+    
+        // Imposta la posizione del palantír
+        const palantir = document.getElementById("palantir");
+        palantir.style.top = posY + '%';
+        palantir.style.left = posX + '%';
     </script>
 
 </body>
