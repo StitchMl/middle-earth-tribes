@@ -15,7 +15,9 @@
                         url('images/sfondo_sfera.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
-            padding: 50px;
+            padding: 50px; /* Padding generale */
+            padding-left: 50px; /* Padding sinistro */
+            padding-right: 50px; /* Padding destro */
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -140,9 +142,6 @@
     </style>
 </head>
 <body>
-    <img src="images/sfondo_sfera.jpg" style="max-width: 100%; height: auto;" alt="Sfondo con sfera">
-    <div id="palantir" style="position: absolute; top: 44.9%; left: 48.3%; transform: translate(-50%, -50%);"></div>
-    <br>
     <h2 class="typing">🔮 Scrivi nel palantir il tuo nome e cognome per sapere a quale razza appartieni... 🔮</h2>
     <br>
     <input type="text" id="userInput" placeholder="Scrivi il tuo nome...">
